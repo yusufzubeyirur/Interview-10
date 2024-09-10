@@ -1,0 +1,89 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+/* Sayfanın ortasında testi başlat butonunu yerleştirin */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%; /* Tam yüksekliği kaplar */
+  margin: 0;
+}
+
+/* Sayfanın ortasında fotoğrafı yerleştirir */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Tam yüksekliği kaplar */
+  margin: 0;
+  background-color: #f0f0f0; /* Arka plan rengini açık gri yapalım */
+}
+
+.start-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #007bff; /* Butonun arka plan rengi */
+  border: none;
+  border-radius: 12px; /* Kenarları yuvarlat */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Hem yatay hem dikey ortalamak için */
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none; /* Kenarlık yok */
+  padding: 20px;
+  
+  z-index: 1000;
+}
+
+.modal h2 {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.image-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center; 
+}
+
+.image-container img {
+  width: 100px;
+  height: 70px;
+  object-fit: cover;
+  cursor: pointer;
+  border: none; /* Resim kenarlıklarını kaldırır */
+  border-radius: 8px; /* Resim kenarlarını yuvarlat */
+  transition: opacity 0.3s ease;
+}
+
+.image-container img.selected {
+  opacity: 0.7; /* Seçili resmi hafif opak hale getirir */
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #dc3545; /* Kapat butonunun arka plan rengi */
+  border: none;
+  border-radius: 8px; /* Kenarları yuvarlat */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #c82333; /* Kapat butonunda hover efekti */
+}
