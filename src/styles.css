@@ -3,16 +3,6 @@
   text-align: center;
 }
 
-/* Sayfanın ortasında testi başlat butonunu yerleştirin */
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50%; /* Tam yüksekliği kaplar */
-  margin: 0;
-}
-
-/* Sayfanın ortasında fotoğrafı yerleştirir */
 body {
   display: flex;
   justify-content: center;
@@ -42,19 +32,20 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: none; /* Kenarlık yok */
   padding: 20px;
-  
   z-index: 1000;
 }
 
 .modal h2 {
+  display: flex;
+  justify-content: center;
   margin: 0;
   margin-bottom: 20px;
 }
 
 .image-container {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   justify-content: center; 
 }
@@ -64,13 +55,17 @@ body {
   height: 70px;
   object-fit: cover;
   cursor: pointer;
-  border: none; /* Resim kenarlıklarını kaldırır */
-  border-radius: 8px; /* Resim kenarlarını yuvarlat */
+  border-radius: 8px; 
   transition: opacity 0.3s ease;
 }
 
 .image-container img.selected {
-  opacity: 0.7; /* Seçili resmi hafif opak hale getirir */
+  opacity: 0.7; /* Seçilen fotoğraf hafifçe opak olur */
+}
+
+/* Her bir resmin boyutunu ayarla ve iki satır üç sütun oluştur */
+.image-container img {
+  flex: 1 1 calc(33.333% - 20px); /* %33 genişlik ve aralık sağlar */
 }
 
 button {

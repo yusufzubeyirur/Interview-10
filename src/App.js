@@ -28,9 +28,7 @@ const Captcha = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [correctImageIndex, setCorrectImageIndex] = useState(null);
   const [selectedImageIndex, setSelectedImageIndex] = useState(null);
-  const [captchaMessage, setCaptchaMessage] = useState(
-    "CAPTCHA Testini Başlat"
-  );
+  const [captchaMessage, setCaptchaMessage] = useState("CAPTCHA");
 
   // Rastgele bir doğru resim seçme
   const getRandomImageIndex = () =>
